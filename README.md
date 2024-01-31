@@ -5,10 +5,8 @@ Categories:
 - add / delete / edit categories
 - add / delete posts from category
 - listing of categories
-  
+
 Posts:
 - add / delete / edit categories
 - add / delete post in different categories
 - listing of posts with pagination
-
-  
