@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::group(['middleware' => ['web']], function() {
+    Route::get('/', function () {
+        return view('main');
+    });
 
-Route::get('/', function () {
-    return view('welcome');
+    Route::resource('categories', CategoryController::class);
+    Route::resource('posts', PostController::class);
 });
