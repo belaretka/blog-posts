@@ -25,16 +25,11 @@
             <h1>Create New Post</h1>
             <hr>
             {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '', 'files' => true)) !!}
-                {{ Form::label('title', 'Title:') }}
-                {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
+            {{ Form::label('title', 'Title:') }}
+            {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
 
-{{--                {{ Form::label('category_id', 'Category:') }}--}}
-{{--            <select class="form-control" name="category_id">--}}
-{{--                @foreach($categories as $category)--}}
-{{--                    <option value='{{ $category->id }}'>{{ $category->name }}</option>--}}
-{{--                @endforeach--}}
-
-{{--            </select>--}}
+            {{ Form::label('categories', 'Categories:', ['class' => 'form-spacing-top']) }}
+            {{ Form::select('categories[]', $categories, null, ['class' => 'form-control select2-multi', 'multiple' => 'multiple']) }}
 
             {{ Form::label('body', "Post Body:") }}
             {{ Form::textarea('body', null, array('class' => 'form-control')) }}

@@ -14,8 +14,12 @@ class PostController extends Controller
     public function create(): View
     {
         $categories = Category::all();
+        $cats = array();
+        foreach ($categories as $category) {
+            $cats[$category->id] = $category->name;
+        }
         return view('posts.create')->with([
-            'categories' => $categories,
+            'categories' => $cats,
         ]);
     }
 
