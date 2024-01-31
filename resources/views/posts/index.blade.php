@@ -15,7 +15,7 @@
         <div class="col-md-12">
             <hr>
         </div>
-    </div> <!-- end of .row -->
+    </div>
 
     <div class="row">
         <div class="col-md-12">

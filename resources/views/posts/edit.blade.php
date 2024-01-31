@@ -57,7 +57,7 @@
             </div>
         </div>
         {!! Form::close() !!}
-    </div>	<!-- end of .row (form) -->
+    </div>
 
 @stop
 
