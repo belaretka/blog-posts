@@ -10,3 +10,15 @@ Posts:
 - add / delete / edit categories
 - add / delete post in different categories
 - listing of posts with pagination
+
+Installation:
+- git clone <my-project>
+- sudo chmod 777 -R storage/
+- cd blog-posts
+- docker compose up -d
+- docker compose exec php-cli bash
+  - composer install
+  - cp .env.example .env
+  - php artisan key:generate
+  - php artisan migrate
+- open in browser http://localhost:8080/
