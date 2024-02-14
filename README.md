@@ -7,7 +7,7 @@ Categories:
 - listing of categories
 
 Posts:
-- add / delete / edit categories
+- add / delete / edit posts
 - add / delete post in different categories
 - listing of posts with pagination
 
